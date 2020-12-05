@@ -1,5 +1,4 @@
 const express = require('express')
-const Encargado = require('../models/productos')
 const app = express()
 const Producto= require('../models/productos')
 
@@ -68,29 +67,4 @@ if (err){
       })
   
     })
-    app.post('/NuevoEncargado',function(req,res){
-        let body= req.body;
-    let encargado = new Encargado({
-        nombre: body.nombreEncargadp,
-        categoria: body.apellidos,
-        precio: body.email,
-        disponibilidad: body.password
-  
-      });
-      encargado.save((err,encargadoDB)=>{
-  if (err){
-      return res.status(400).json({
-          ok: false,
-          msg: 'ocurrio un error',
-          err
-     })
-  }
-  
-    
-        res.json({
-            ok: true,
-              mensaje: 'Producto Insertado con exito',
-              encargadoDB
-        })
-      })
-  })
+ 

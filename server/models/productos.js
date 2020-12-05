@@ -50,4 +50,3 @@ required: [true,'La contrasena es necesaria ']
     
 })
 module.exports= mongoose.model('Productos',productosSchema)
-module.exports= mongoose.model('Encargados',encargadosSchema)
